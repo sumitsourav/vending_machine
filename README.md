@@ -32,7 +32,7 @@ The Project uses RSpec for testing. To execute Rspec run:
 * Black Coffee sugarless -> BCSL
 * Milk Coffee sugarless -> MCSL
 
-* For seeding the DB add these lines of code to your seed.rb file and then run `rake db:seed`
+* For seeding the DB add the below lines of code to your seed.rb file and then run `rake db:seed`
 * you can change the quantity of the ingredients to what ever you want (should be greater than 0).
 
 ```ruby
