@@ -3,6 +3,15 @@
 # Internal: Controller class for Beverages
 class BeveragesController < ApplicationController
 
+  def create
+    params.require(%i[name recipe_id])
+    post_params = {
+      name: params[:name],
+      recipe_id: params[:recipe_id]
+    }
+    render json: Beverage.create!(post_params), status: :created
+  end
+
   def index
     beverages = Beverage.all
 
@@ -18,6 +27,12 @@ class BeveragesController < ApplicationController
 
   def current_beverage
     Beverage.find_by!(id: params[:id])
+  end
+
+  def destroy
+    params.require(%i[id])
+    current_beverage.destroy!
+    head :no_content
   end
 
   def serialize_beverage_collection(collection)

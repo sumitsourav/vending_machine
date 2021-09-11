@@ -13,12 +13,12 @@ RSpec.describe VendingTransactionsController, type: :controller do
   describe '#create' do
     context 'when request params are valid' do
       before do
-        allow(Ingredient).to receive(:find_by!).and_return(ingredient)
-        allow(Inventory).to receive(:get_recipe).and_return({})
+        allow(Beverage).to receive(:find_by!).and_return(beverage)
+        allow(ingredient).to receive(:update).and_return(true)
       end
 
       it 'Successfully dispenses' do
-        get :create, params: { beverage: 'BCS' }
+        get :create, params: { beverage_id: 1 }
         expect(response.status).to eq 200
         expect(JSON.parse(response.body)['status']).to eq('Dispensed')
       end
@@ -26,14 +26,13 @@ RSpec.describe VendingTransactionsController, type: :controller do
 
     context 'when request params are valid and equal to total ingredients' do
       before do
-        allow(Ingredient).to receive(:find_by!).and_return(ingredient_equal)
-        allow(Ingredient).to receive(:where).and_return([ingredient_equal])
+        allow(Beverage).to receive(:find_by!).and_return(beverage)
+        allow(BeverageRecipe).to receive(:where).and_return([ingredient_equal])
         allow(ingredient).to receive(:update).and_return(true)
-        allow(Inventory).to receive(:get_recipe).and_return({})
       end
 
       it 'successfully dispenses and throws the empty ingredients in the response' do
-        get :create, params: { beverage: 'BCSL' }
+        get :create, params: { beverage_id: 2 }
         expect(response.status).to eq 200
         expect(JSON.parse(response.body)['status']).to eq('Dispensed')
       end

@@ -4,4 +4,6 @@
 class Beverage < ApplicationRecord
   validates :name, presence: true, length: { maximum: 36 }
   validates_uniqueness_of :name, case_sensitive: false
+
+  has_many :beverage_recipes, dependent: :destroy
 end

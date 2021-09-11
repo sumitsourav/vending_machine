@@ -2,29 +2,34 @@
 
 # Internal: Controller class for Vending Machine
 class VendingTransactionsController < ApplicationController
-#   skip_before_action :verify_authenticity_token
   DISPENSED = 'Dispensed'
   
   def create
-    recipe = Inventory.get_recipe(name: params[:beverage_name])
-    empty_ingredients = []
-    hash = {}
-    count = 0
+    beverage_id = params[:beverage_id]
+    beverage = Beverage.find_by!(id: beverage_id)
+    recipe_id = beverage.recipe_id
+    recipes = BeverageRecipe.where(recipe_id: recipe_id)
     hash_recipe = {}
+    recipes.map do |res|
+      hash_recipe[res.ingredient_id] = res.quantity
+    end
+    # recipe = Inventory.get_recipe(name: params[:beverage_name])
+    empty_ingredients = []
+    count = 0
     hash_ingredients_present = []
     error_message = []
-    recipe.instance_variables.each {|var| hash_recipe[var.to_s.delete("@")] = recipe.instance_variable_get(var) }
+    # recipe.instance_variables.each {|var| hash_recipe[var.to_s.delete("@")] = recipe.instance_variable_get(var) }
     ingredients = Ingredient.all
     ingredients.map do |ing|
       hash_ingredients_present.push({
-        id: ing.id,
+        id: ing.ingredient_id,
         name: ing.name,
         quantity: ing.quantity
       })
     end
     error_msg = []
     hash_ingredients_present.each do |hip|
-      current_units = hip[:quantity] - hash_recipe[hip[:name].downcase]
+      current_units = hip[:quantity] - hash_recipe[hip[:id]]
       if current_units > 0
         hash_ingredients_present[count][:quantity] = current_units
       elsif current_units == 0

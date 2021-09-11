@@ -2,7 +2,16 @@
 
 # Internal: Controller class for Beverages
 class IngredientsController < ApplicationController
-#   skip_before_action :verify_authenticity_token
+
+  def create
+    params.require(%i[ingredient_id name quantity])
+    post_params = {
+      ingredient_id: params[:ingredient_id],
+      name: params[:name],
+      quantity: params[:quantity]
+    }
+    render json: Ingredient.create!(post_params), status: :created
+  end
 
   def index
     ingredients = Ingredient.all
@@ -25,6 +34,12 @@ class IngredientsController < ApplicationController
 
   def current_ingredient
     Ingredient.find_by!(id: params[:id])
+  end
+
+  def destroy
+    params.require(%i[id])
+    current_ingredient.destroy!
+    head :no_content
   end
 
   def serialize_ingredient_collection(collection)

@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_10_081061) do
+ActiveRecord::Schema.define(version: 2021_09_11_153212) do
+
+  create_table "beverage_recipes", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.integer "ingredient_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "quantity"
+    t.integer "beverage_id"
+    t.index ["beverage_id"], name: "index_beverage_recipes_on_beverage_id"
+  end
 
   create_table "beverages", force: :cascade do |t|
     t.string "name"
-    t.integer "recipe"
+    t.integer "recipe_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name"], name: "index_beverages_on_name"
@@ -25,7 +35,9 @@ ActiveRecord::Schema.define(version: 2021_09_10_081061) do
     t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "ingredient_id"
     t.index ["name"], name: "index_ingredients_on_name"
   end
 
+  add_foreign_key "beverage_recipes", "beverages"
 end
