@@ -27,7 +27,7 @@ The Project uses RSpec for testing. To execute Rspec run:
 `bundle exec rspec`
 
 - These the few assumption that has been made for the beverage vending machine are:
-1. The Beverages which comes with the vending machine are name in short form for dispensing, They are:
+1. The Beverages which comes with the vending machine have their name in short form for dispensing, They are:
 * Black Coffee with sugar -> BCS
 * Milk Coffee with sugar -> MCS
 * Black Coffee sugarless -> BCSL
@@ -46,6 +46,7 @@ The Project uses RSpec for testing. To execute Rspec run:
 * The PUT call to refill the invertory take quantity in body as { "quantity": your_quantity } or can be sent in query params as "http://localhost:3000/v1/ingredients/{ingredientId}?quantity=your_quantity"
 
 * /v1/vend - POST by beverage name Dispenses a beverage associated with the provided beverage_name.
-* For example the URL to dispense Black coffee with sugar will be "http://localhost:3000/v1/vend?beverage_name=BCS" 
+* For example the URL to dispense Black coffee with sugar will be "http://localhost:3000/v1/vend?beverage_name=BCS"
+  or can be passed in the body of the request as { "beverage_name": "BCS" }
 
 
