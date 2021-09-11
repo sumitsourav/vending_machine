@@ -3,7 +3,7 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-This Project with the idea in mind that the User/Admin would be able to populate the beverages and ingredient with the help of the seed.rb file (Please uncomment the code form the seed file before running it). The seed file has the beverages and ingredients as per the vending machine requirements. Also the Assumption is taken that the APIS are only automating the vending process.And the recipe for the beverages are in the recipe.rb class.
+This Project with the idea in mind that the User/Admin would be able to populate the beverages and ingredient with the help of the seed.rb file. The seed file has the beverages and ingredients as per the vending machine requirements. Also the Assumption is taken that the APIS are only automating the vending process.And the recipe for the beverages are in the recipe.rb class.
 
 - Ruby version
   Requires ruby-2.7.2
@@ -17,6 +17,7 @@ This Project with the idea in mind that the User/Admin would be able to populate
   Run the Following Commands to setup the DB:
   `rake db:create` - To Create the database
   `rake db:migrate` - To migrate the schema and related details
+  `rake db:seed` - To seed the database with beverages and ingredients
   Run `rails s` to start the server then Navigate to localhost:3000 to check if server is running
 
 - How to run the test suite
@@ -31,21 +32,6 @@ The Project uses RSpec for testing. To execute Rspec run:
 * Milk Coffee with sugar -> MCS
 * Black Coffee sugarless -> BCSL
 * Milk Coffee sugarless -> MCSL
-
-* For seeding the DB add the below lines of code to your seed.rb file and then run `rake db:seed`
-* you can change the quantity of the ingredients to what ever you want (should be greater than 0).
-
-```ruby
-black_coffee = Beverage.create!(name: 'Black Coffee', recipe: 1)
-milk_coffee = Beverage.create!(name: 'Milk Coffee', recipe: 2)
-black_coffee_sugarless = Beverage.create!(name: 'Black Coffee Sugarless', recipe: 3)
-milk_coffee_sugarless = Beverage.create!(name: 'Milk Coffee Sugarless', recipe: 4)
-
-water = Ingredient.create!(name: 'water', quantity: 10)
-milk = Ingredient.create!(name: 'milk', quantity: 10)
-sugar = Ingredient.create!(name: 'sugar', quantity: 10)
-coffee = Ingredient.create!(name: 'coffee', quantity: 10)
-```
 
 - There are no endpoint to add beverages a seed.rb files is provided with the initial beverages to seed the database.
 
