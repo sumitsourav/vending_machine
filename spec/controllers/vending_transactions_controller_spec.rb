@@ -38,19 +38,5 @@ RSpec.describe VendingTransactionsController, type: :controller do
         expect(JSON.parse(response.body)['status']).to eq('Dispensed')
       end
     end
-
-    # context 'when request params are valid and equal to total ingredients' do
-    #   before do
-    #     allow(Ingredient).to receive(:find_by!).and_return(ingredient_less)
-    #     allow(Ingredient).to receive(:where).and_return([ingredient_less])
-    #     allow(ingredient).to receive(:update).and_return(false)
-    #     allow(Inventory).to receive(:get_recipe).and_return({})
-    #   end
-
-    #   it 'raises error as it cant be dispensed' do
-    #     get :create, params: { beverage: 'MCS' }
-    #     expect(response.status).to eq 400
-    #   end
-    # end
   end
 end
