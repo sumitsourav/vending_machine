@@ -42,6 +42,7 @@ The Project uses RSpec for testing. To execute Rspec run:
 * /v1/ingredients - GET Endpoint to get the list of all ingredients
 * /v1/ingredients/{ingredientId} - GET Endpoint to get the details of a specific ingredient
 * /v1/ingredients/{ingredientId} - PUT Endpoint to Refill the Inventory
+* The PUT call to refill the invertory take quantity in body as { "quantity": your_quantity } or can be sent in query params as "http://localhost:3000/v1/ingredients/{ingredientId}?quantity=your_quantity"
 
 * /v1/vend - POST by beverage name Dispenses a beverage associated with the provided beverage_name.
 * For example the URL to dispense Black coffee with sugar will be "http://localhost:3000/v1/vend?beverage_name=BCS" 
