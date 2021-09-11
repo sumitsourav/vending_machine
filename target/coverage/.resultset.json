@@ -1,0 +1,355 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/sumitsourav/Desktop/Github/vending/app/controllers/beverages_controller.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/controllers/concerns/rescuable.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/controllers/ingredients_controller.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/controllers/vending_transactions_controller.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          2,
+          null,
+          2,
+          null,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          1,
+          2,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/models/beverage.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/models/ingredient.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/models/inventory.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/models/recipe.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/serializers/ingredient_serializer.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/serializers/beverage_serializer.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/helpers/application_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/sumitsourav/Desktop/Github/vending/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1631362344
+  }
+}
