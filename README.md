@@ -35,6 +35,7 @@ The Project uses RSpec for testing. To execute Rspec run:
 * For seeding the DB add these lines of code to your seed.rb file and then run `rake db:seed`
 * you can change the quantity of the ingredients to what ever you want (should be greater than 0).
 
+```ruby
 black_coffee = Beverage.create!(name: 'Black Coffee', recipe: 1)
 milk_coffee = Beverage.create!(name: 'Milk Coffee', recipe: 2)
 black_coffee_sugarless = Beverage.create!(name: 'Black Coffee Sugarless', recipe: 3)
@@ -44,6 +45,7 @@ water = Ingredient.create!(name: 'water', quantity: 10)
 milk = Ingredient.create!(name: 'milk', quantity: 10)
 sugar = Ingredient.create!(name: 'sugar', quantity: 10)
 coffee = Ingredient.create!(name: 'coffee', quantity: 10)
+```
 
 - There are no endpoint to add beverages a seed.rb files is provided with the initial beverages to seed the database.
 
