@@ -12,7 +12,8 @@ This Project with the idea in mind that the User/Admin would be able to populate
   Bundler Gem Installed
 
 - Configuration
-
+  Clone the Repo with git clone command and link - `git clone https://github.com/sumitsourav/vending_machine.git`
+  Checkout to the future_scope branch with this command - `git checkout future_scope`
   Run `bundle install` to install the required packages
   Run the Following Commands to setup the DB:
   `rake db:create` - To Create the database
