@@ -18,6 +18,7 @@ This Project with the idea in mind that the User/Admin would be able to populate
  * Run the Following Commands to setup the DB:
  * `rake db:create` - To Create the database
  * `rake db:migrate` - To migrate the schema and related details
+ * You can run the `rake db:seed` command to fill the Db with data (as per Requirement) form the seed.rb file or else you can also create your own beverages and        beverage_recipes via the endpoints.
  * Run `rails s` to start the server then Navigate to localhost:3000 to check if server is running
 
 - How to run the test suite
