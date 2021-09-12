@@ -29,7 +29,7 @@ class VendingTransactionsController < ApplicationController
     end
     error_msg = []
     hash_ingredients_present.each do |hip|
-      current_units = hip[:quantity] - hash_recipe[hip[:id]]
+      current_units = hip[:quantity] - ( hash_recipe[hip[:id]] || 0 )
       if current_units > 0
         hash_ingredients_present[count][:quantity] = current_units
       elsif current_units == 0
@@ -44,7 +44,7 @@ class VendingTransactionsController < ApplicationController
 
     update_ingredients(hash_ingredients_present)
 
-    output_json = { status: DISPENSED }
+    output_json = { status: DISPENSED, Beverage: beverage.name }
     output_json[:empty_ingredients] = empty_ingredients if empty_ingredients.present?
     render json: output_json
   end

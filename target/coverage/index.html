@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-09-12T05:20:28+05:30">2021-09-12T05:20:28+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-09-12T14:57:55+05:30">2021-09-12T14:57:55+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -3529,7 +3529,7 @@
 
             
 
-            <code class="ruby">      current_units = hip[:quantity] - hash_recipe[hip[:id]]</code>
+            <code class="ruby">      current_units = hip[:quantity] - ( hash_recipe[hip[:id]] || 0 )</code>
           </li>
         </div>
       
@@ -3694,7 +3694,7 @@
 
             
 
-            <code class="ruby">    output_json = { status: DISPENSED }</code>
+            <code class="ruby">    output_json = { status: DISPENSED, Beverage: beverage.name }</code>
           </li>
         </div>
       
