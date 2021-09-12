@@ -11,14 +11,14 @@ This Project with the idea in mind that the User/Admin would be able to populate
   Ruby Installed
   Bundler Gem Installed
 
-- Configuration
-  Clone the Repo with git clone command and link - `git clone https://github.com/sumitsourav/vending_machine.git`
-  Checkout to the future_scope branch with this command - `git checkout future_scope`
-  Run `bundle install` to install the required packages
-  Run the Following Commands to setup the DB:
-  `rake db:create` - To Create the database
-  `rake db:migrate` - To migrate the schema and related details
-  Run `rails s` to start the server then Navigate to localhost:3000 to check if server is running
+#### Configuration
+ * Clone the Repo with git clone command and link - `git clone https://github.com/sumitsourav/vending_machine.git`
+ * Checkout to the future_scope branch with this command - `git checkout future_scope`
+ * Run `bundle install` to install the required packages
+ * Run the Following Commands to setup the DB:
+ * `rake db:create` - To Create the database
+ * `rake db:migrate` - To migrate the schema and related details
+ * Run `rails s` to start the server then Navigate to localhost:3000 to check if server is running
 
 - How to run the test suite
 
