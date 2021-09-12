@@ -3,7 +3,7 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-This Project with the idea in mind that the User/Admin would be able to populate any number of beverages along with its required recipe as future proof. Also if the beverage is deleted the specific recipe associated with that beverage will also gets deleted.
+This Project with the idea in mind that the User/Admin would be able to populate any number of beverages along with its required recipe (recipe will be added with the help of beverage_recipe endpoint) as future proof. Also if the beverage is deleted the specific recipe associated with that beverage will also gets deleted.
 
 - Ruby version
   Requires ruby-2.7.2
