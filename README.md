@@ -3,7 +3,7 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-This Project with the idea in mind that the User/Admin would be able to populate the beverages and ingredient with the help of the seed.rb file. The seed file has the beverages and ingredients as per the vending machine requirements. Also the Assumption is taken that the APIS are only automating the vending process.And the recipe for the beverages are in the recipe.rb class.
+This Project with the idea in mind that the User/Admin would be able to populate any number of beverages along with its required recipe as future proof. Also if the beverage is deleted the specific recipe associated with that beverage will also gets deleted.
 
 - Ruby version
   Requires ruby-2.7.2
